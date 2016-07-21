@@ -42,9 +42,9 @@ namespace PokemonGo.RocketAPI.Logic
                     await TransferDuplicatePokemon(true);
                     await RecycleItems();
                     await RepeatAction(10, async () => await ExecuteFarmingPokestopsAndPokemons(_client));
-                    await RepeatAction(10, async () => await TransferDuplicatePokemon(true));
-                    await RepeatAction(10, async () => await RecycleItems());
-                    await RepeatAction(10, async () => await EvolveAllPokemonWithEnoughCandy());
+                    await RepeatAction(1, async () => await TransferDuplicatePokemon(true));
+                    await RepeatAction(1, async () => await RecycleItems());
+                    await RepeatAction(1, async () => await EvolveAllPokemonWithEnoughCandy());
 
 
                     /*
